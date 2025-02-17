@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yusei+Magic&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+[class*="__container"] {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+.line {
+    width: 60px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #fffa5c;
+    margin: 20px 0;
+}
+/*-------------------------------- Header -------------------------------*/
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header__container {
+    height: 100px;
+}
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.nav {
+}
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    border-bottom: #FFFFFF33 1px solid;
+}
+.nav__item {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.nav__link {
+    color: white;
+}
+.nav__item:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    background: #fffa5c;
+    transition: width 0.5s;
+}
+.nav__item:hover:after {
+    width: 99%;
+}
+.nav__logo {
+    padding-top: 40px;
+}
+.nav__logo-link {
+
+}
+.nav__logo-img {
+    width: 120px;
+    height: 120px;
+}
+
+/*-------------------------------- Main Container -------------------------------*/
+
+.page__main {}
+.main {
+    background: url("../images/main.jpg") 0 0/cover no-repeat;
+    height: 750px;
+}
+.main__container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.main__schedule {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    height: 100%;
+}
+.main__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 80%;
+    border-right: #FFFFFF33 1px solid;
+    border-left: #FFFFFF33 1px solid;
+    padding-top: 160px;
+    height: 100%;
+}
+.main__subtitle {}
+.main__title {
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
+}
+.main__line {
+    margin-bottom: 40px;
+}
+.main__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+}
+.main__button {
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #fffa5c;
+    background-color: rgba(255, 250, 92, 0.72);
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+.main__button:hover {
+    background-color: transparent;
+}
+.main__arrow {
+    margin-top: 30px;
+    width: 60px;
+    height: 60px;
+    border: #FFFFFF33 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+.main__arrow:hover {
+    background-color: #FFFFFF33;
+}
+.main__arrow a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.main__arrow a img {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: white 3px solid;
+}
+.main__links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -15px 0;
+}
+.main__link {
+    width: 60px;
+    height: 60px;
+    margin: 15px 0;
+    border: #FFFFFF33 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+.main__link:hover {
+    background-color: #FFFFFF33;
+}
+.main__link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
