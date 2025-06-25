@@ -1,84 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lemon & Thyme</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Lemon & Thyme</title>
+    <link rel="shortcut icon" href="icons/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrapper">
-  <header class="header">
-    <div class="header__container">
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Team</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Booking</a></li>
-        </ul>
-        <div class="nav__logo">
-          <a href="#" class="nav__logo-link">
-            <img class="nav__logo-img" src="images/logo.svg" alt="Lemon & Thyme logo">
-          </a>
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Team</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Booking</a></li>
+                </ul>
+                <div class="nav__logo">
+                    <a href="#" class="nav__logo-link">
+                        <img class="nav__logo-img" src="icons/logo.svg" alt="Lemon & Thyme logo">
+                    </a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Menu</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Gallery</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Menu</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Gallery</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="page">
-    <section class="page__main main">
-      <div class="main__container">
-        <p class="main__schedule">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</p>
-        <div class="main__text">
-          <p class="main__subtitle subtitle">restaurant</p>
-          <h1 class="main__title">Lemon & Thyme</h1>
-          <div class="main__line line"></div>
-          <div class="main__buttons">
-            <a class="main__button">Book a table</a>
-            <a class="main__button">Explore</a>
-          </div>
-          <div class="main__arrow">
-            <a href="#">
-              <img src="images/arrow.svg" alt="Down arrow icon">
-            </a>
-          </div>
+    </header>
+    <main class="page">
+        <section class="page__main main">
+            <div class="main__container">
+                <div class="main__schedule">
+                    <p class="main__schedule-text">
+                        Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
+                    </p>
+                </div>
+                <div class="main__text">
+                    <p class="main__note note">restaurant</p>
+                    <h1 class="main__title">Lemon & Thyme</h1>
+                    <div class="main__line line"></div>
+                    <div class="main__buttons">
+                        <a class="main__button">Book a table</a>
+                        <a class="main__button">Explore</a>
+                    </div>
+                    <div class="main__arrow">
+                        <a href="#about">
+                            <img src="icons/arrow.svg" alt="Down arrow icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="main__links">
+                    <a class="main__link" href="https://www.facebook.com/" target="_blank">
+                        <img src="icons/facebook.svg" alt="Link to facebook">
+                    </a>
+                    <a class="main__link" href="https://x.com/" target="_blank">
+                        <img src="icons/twitter.svg" alt="Link to twitter">
+                    </a>
+                    <a class="main__link" href="https://www.instagram.com/" target="_blank">
+                        <img src="icons/instagram.svg" alt="Link to instagram">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="page__about about">
+            <div class="about__container">
+                <div class="about__text-block">
+                    <h2 class="about__title section-title">About Us</h2>
+                    <div class="about__line line"></div>
+                    <p class="about__subtitle">Welcome to Lemon & Thyme, where fresh ingredients and bold flavors come
+                        together to create unforgettable dishes.</p>
+                    <p class="about__text">We blend tradition with modern techniques, using the
+                        finest herbs and produce to bring out the best in every meal. Whether you're here for a casual
+                        lunch or a special celebration, our warm and inviting atmosphere makes every visit memorable.
+                        Join us and savor the perfect balance of flavor, freshness, and creativity.</p>
+                </div>
+                <div class="about__photo-block">
+                    <img class="about__photo" src="./images/about.jpg" alt="Restaurant interior">
+                    <div class="about__border border"></div>
+                </div>
+            </div>
+        </section>
+        <section class="page__team team">
+            <p class="team__note note">our team</p>
+            <div class="team__container">
+                <div class="team__photo-block">
+                    <div class="team__border border"></div>
+                    <img class="team__photo" src="./images/chef.jpg" alt="Master chef">
+                </div>
+                <div class="team__text-block">
+                    <h2 class="team__title section-title">Master chef</h2>
+                    <div class="team__line line"></div>
+                    <p class="team__subtitle">At Lemon & Thyme, our kitchen is led by a passionate and skilled master chef who brings years of experience and creativity to every dish.</p>
+                    <p class="team__text">With a deep love for fresh ingredients and bold flavors, they craft each plate with precision and artistry. Inspired by both tradition and innovation, our chef transforms simple ingredients into extraordinary culinary experiences. Every meal is a reflection of expertise, dedication, and a commitment to excellence.</p>
+                </div>
+            </div>
+        </section>
+        <section class="page__book book">
+            <div class="book__container">
+                <div class="book__form-block">
+                    <h2 class="book__title section-title">Book a table</h2>
+                    <div class="book__line line"></div>
+                    <form action="#" class="book__form">
+                        <div class="book__input-block">
+                            <input type="text" class="book__input" placeholder="Name">
+                            <input type="text" class="book__input" placeholder="Phone">
+                            <input type="date" class="book__input" placeholder="Date (mm/dd)">
+                        </div>
+                        <div class="book__input-block">
+                            <input type="email" class="book__input" placeholder="Email">
+                            <select name="people" id="number_of_people" class="book__input">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="more">More...</option>
+                            </select>
+                            <input type="time" class="book__input" placeholder="Time">
+                        </div>
+                    </form>
+                    <input type="submit" class="book__button" value="BOOK NOW">
+                </div>
+                <div class="book__photo-block">
+                    <img class="book__photo" src="./images/book.jpg" alt="Restaurant dishes">
+                    <div class="book__border border"></div>
+                </div>
+            </div>
+            <div class="book__more-info-block">
+                <p class="book__more-info">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</p>
+            </div>
+        </section>
+        <section class="page__specialties specialties">
+            <p class="specialties__note note">specialties</p>
+            <div class="specialties__container">
+                <div class="specialties__photo-block">
+                    <div class="specialties__border border"></div>
+                    <img class="specialties__photo" src="./images/gazpacho.jpg" alt="Chocolate pancakes with raspberry">
+                </div>
+                <div class="specialties__text-block">
+                    <h2 class="specialties__title section-title">Chocolate pancakes</h2>
+                    <div class="specialties__line line"></div>
+                    <p class="specialties__subtitle">At Lemon & Thyme, our kitchen is led by a passionate and skilled master chef who brings years of experience and creativity to every dish.</p>
+                    <p class="specialties__text">With a deep love for fresh ingredients and bold flavors, they craft each plate with precision and artistry. Inspired by both tradition and innovation, our chef transforms simple ingredients into extraordinary culinary experiences. Every meal is a reflection of expertise, dedication, and a commitment to excellence.</p>
+                </div>
+            </div>
+            <div class="specialties__slider">. . .</div>
+        </section>
+        <section class="page__menu menu">
+            <div class="menu__container">
+                <h2 class="menu__title section-title">DELICIOUS MENU</h2>
+                <div class="menu__line line"></div>
+                <p class="menu__subtitle">Explore our delicious selection of thoughtfully crafted dishes made with fresh, seasonal ingredients.</p>
+                <ul class="menu__nav">
+                    <li class="menu__nav-item" id="soup">soup</li>
+                    <li class="menu__nav-item" id="pizza">pizza</li>
+                    <li class="menu__nav-item" id="pasta">pasta</li>
+                    <li class="menu__nav-item" id="desert">desert</li>
+                    <li class="menu__nav-item" id="wine">wine</li>
+                    <li class="menu__nav-item" id="beer">beer</li>
+                    <li class="menu__nav-item" id="drinks">drinks</li>
+                </ul>
+                <ul class="menu__list" id="menu"></ul>
+            </div>
+        </section>
+        <section class="page__events events">
+            <p class="events__note note">private events</p>
+            <div class="events__container">
+                <div class="events__photo-block wedding">
+                    <div class="wedding__border border"></div>
+                    <img class="wedding__photo" src="./images/wedding.jpg" alt="Wedding table setting with candlestick and flowers">
+                    <div class="wedding__title">Wedding</div>
+                </div>
+                <div class="events__photo-block corporate">
+                    <div class="corporate__title">Corporate parties</div>
+                    <img class="corporate__photo" src="./images/event.jpg" alt="Holding a corporate party in a restaurant">
+                    <div class="corporate__border border"></div>
+                </div>
+            </div>
+            <div class="events__more-info-block">
+                <p class="events__more-info">For private events please call: +40 729 131 637/+40 726 458 782 or use the contact form.</p>
+            </div>
+        </section>
+        <section class="page__gallery gallery">
+            <div class="gallery__photo-block">
+                <img id="gallery1" src="images/gallery1.jpg" alt="Yellow lamp in the restaurant" class="gallery__photo">
+            </div>
+            <div class="gallery__photo-block">
+                <img id="gallery2" src="images/gallery2.jpg" alt="Oysters with lemon" class="gallery__photo">
+            </div>
+            <div class="gallery__photo-block">
+                <img id="gallery3" src="images/gallery3.jpg" alt="Tables in the restaurant" class="gallery__photo">
+            </div>
+            <div class="gallery__photo-block">
+                <img id="gallery4" src="images/gallery4.jpg" alt="Grilled meat and vegetable" class="gallery__photo">
+            </div>
+            <div id="modal" class="gallery__modal modal">
+                <span id="modalClose" class="modal__close">&times;</span>
+                <div class="modal__content">
+                    <img class="modal__image" id="modalImage">
+                </div>
+                
+            </div>
+        </section>
+        <section class="page__contact contact">
+            <div class="contact__container">
+                <h2 class="contact__title section-title">Contact</h2>
+                <div class="contact__line line"></div>
+                <p class="contact__subtitle">Get in touch with us to book a table, ask a question, or simply say hello — we’d love to hear from you!</p>
+                <form action="#" class="contact__form-block"></form>
+            </div>
+        </section>
+        <section class="page__map map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1147936.0543722685!2d-112.61410949333374!3d33.31309269624713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4604576f66b42315%3A0x3bb69bd70e50e604!2sLemon%20%26%20Thyme!5e0!3m2!1suk!2sua!4v1750844695509!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">&copy; Copyright <span class="bold">Mindblister</span> 2019</p>
         </div>
-        <div class="main__links">
-          <div class="main__link">
-            <a href="#">
-              <img src="images/facebook.svg" alt="Link to facebook">
-            </a>
-          </div>
-          <div class="main__link">
-            <a href="#">
-              <img src="images/twitter.svg" alt="Link to twitter">
-            </a>
-          </div>
-          <div class="main__link">
-            <a href="#">
-              <img src="images/instagram.svg" alt="Link to instagram">
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <section class="page__about about"></section>
-    <section class="page__team team"></section>
-    <section class="page__book book"></section>
-    <section class="page__specialties specialties"></section>
-    <section class="page__menu menu"></section>
-    <section class="page__events events"></section>
-    <section class="page__gallery gallery"></section>
-    <section class="page__contact contact"></section>
-    <section class="page__map map"></section>
-  </main>
-  <footer></footer>
+    </footer>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,706 @@
+{
+  "soup": [
+    {
+      "name": "Carrot Ginger Soup",
+      "ingredients": [
+        "wine",
+        "salt",
+        "cream",
+        "basil",
+        "milk"
+      ],
+      "price": 14.88
+    },
+    {
+      "name": "Minestrone",
+      "ingredients": [
+        "eggs",
+        "cheese",
+        "garlic",
+        "ham",
+        "chicken"
+      ],
+      "price": 18.52
+    },
+    {
+      "name": "Chicken Soup",
+      "ingredients": [
+        "mushrooms",
+        "eggs",
+        "pineapple",
+        "olive oil",
+        "flour"
+      ],
+      "price": 13.17
+    },
+    {
+      "name": "Seafood Chowder",
+      "ingredients": [
+        "tomato",
+        "ham",
+        "chicken",
+        "eggs",
+        "wine",
+        "oregano"
+      ],
+      "price": 19.52
+    },
+    {
+      "name": "Pumpkin Soup",
+      "ingredients": [
+        "oregano",
+        "ham",
+        "chicken",
+        "salt"
+      ],
+      "price": 20.23
+    },
+    {
+      "name": "Gazpacho",
+      "ingredients": [
+        "onion",
+        "oregano",
+        "mushrooms",
+        "cheese"
+      ],
+      "price": 12.9
+    },
+    {
+      "name": "Tomato Soup",
+      "ingredients": [
+        "beef",
+        "olive oil",
+        "onion",
+        "oregano"
+      ],
+      "price": 13.33
+    },
+    {
+      "name": "Mushroom Soup",
+      "ingredients": [
+        "cream",
+        "pineapple",
+        "salt",
+        "wine",
+        "flour"
+      ],
+      "price": 10.32
+    }
+  ],
+  "pizza": [
+    {
+      "name": "Chicken Alfredo Pizza",
+      "ingredients": [
+        "wine",
+        "basil",
+        "cheese"
+      ],
+      "price": 24.34
+    },
+    {
+      "name": "Spinach Feta",
+      "ingredients": [
+        "cheese",
+        "chicken",
+        "garlic"
+      ],
+      "price": 22.79
+    },
+    {
+      "name": "BBQ Chicken",
+      "ingredients": [
+        "cheese",
+        "sugar",
+        "eggs",
+        "pineapple"
+      ],
+      "price": 17.83
+    },
+    {
+      "name": "Four Cheese",
+      "ingredients": [
+        "sugar",
+        "onion",
+        "eggs",
+        "cheese",
+        "cream"
+      ],
+      "price": 19.1
+    },
+    {
+      "name": "Mushroom Madness",
+      "ingredients": [
+        "cheese",
+        "eggs",
+        "wine"
+      ],
+      "price": 10.29
+    },
+    {
+      "name": "Truffle Pizza",
+      "ingredients": [
+        "ham",
+        "tomato",
+        "olive oil",
+        "eggs"
+      ],
+      "price": 5.31
+    },
+    {
+      "name": "Veggie Delight",
+      "ingredients": [
+        "ham",
+        "flour",
+        "wine",
+        "cream",
+        "chicken",
+        "eggs"
+      ],
+      "price": 14.72
+    },
+    {
+      "name": "Spicy Sausage",
+      "ingredients": [
+        "basil",
+        "tomato",
+        "garlic"
+      ],
+      "price": 7.62
+    },
+    {
+      "name": "Pepperoni",
+      "ingredients": [
+        "salt",
+        "oregano",
+        "garlic",
+        "milk",
+        "basil",
+        "flour"
+      ],
+      "price": 21.35
+    },
+    {
+      "name": "Hawaiian",
+      "ingredients": [
+        "olive oil",
+        "basil",
+        "onion",
+        "cream",
+        "garlic"
+      ],
+      "price": 13.05
+    },
+    {
+      "name": "Prosciutto Arugula",
+      "ingredients": [
+        "cheese",
+        "sugar",
+        "tomato",
+        "olive oil",
+        "ham",
+        "chicken"
+      ],
+      "price": 11.11
+    }
+  ],
+  "pasta": [
+    {
+      "name": "Pesto Pasta",
+      "ingredients": [
+        "mushrooms",
+        "beef",
+        "ham",
+        "cream",
+        "wine",
+        "milk"
+      ],
+      "price": 9.03
+    },
+    {
+      "name": "Fettuccine",
+      "ingredients": [
+        "chicken",
+        "pineapple",
+        "flour",
+        "olive oil",
+        "oregano",
+        "eggs"
+      ],
+      "price": 15.05
+    },
+    {
+      "name": "Seafood Pasta",
+      "ingredients": [
+        "beef",
+        "basil",
+        "onion",
+        "cheese",
+        "chicken"
+      ],
+      "price": 6.74
+    },
+    {
+      "name": "Spaghetti Aglio e Olio",
+      "ingredients": [
+        "pepper",
+        "chicken",
+        "ham",
+        "cheese",
+        "cream"
+      ],
+      "price": 9.19
+    },
+    {
+      "name": "Linguine Shrimp",
+      "ingredients": [
+        "pepper",
+        "olive oil",
+        "salt",
+        "tomato",
+        "ham",
+        "sugar"
+      ],
+      "price": 18.7
+    },
+    {
+      "name": "Ravioli",
+      "ingredients": [
+        "chicken",
+        "cheese",
+        "eggs"
+      ],
+      "price": 19.67
+    },
+    {
+      "name": "Gnocchi",
+      "ingredients": [
+        "oregano",
+        "pineapple",
+        "beef",
+        "cheese"
+      ],
+      "price": 13.13
+    },
+    {
+      "name": "Tortellini",
+      "ingredients": [
+        "ham",
+        "pineapple",
+        "milk"
+      ],
+      "price": 9.57
+    },
+    {
+      "name": "Penne Arrabbiata",
+      "ingredients": [
+        "pineapple",
+        "mushrooms",
+        "eggs",
+        "salt",
+        "tomato"
+      ],
+      "price": 15.68
+    },
+    {
+      "name": "Bolognese",
+      "ingredients": [
+        "beef",
+        "cream",
+        "mushrooms",
+        "oregano",
+        "garlic"
+      ],
+      "price": 14.18
+    },
+    {
+      "name": "Lasagna",
+      "ingredients": [
+        "cheese",
+        "eggs",
+        "garlic",
+        "onion",
+        "milk"
+      ],
+      "price": 21.78
+    },
+    {
+      "name": "Alfredo",
+      "ingredients": [
+        "wine",
+        "chicken",
+        "pepper",
+        "ham",
+        "milk"
+      ],
+      "price": 17.13
+    },
+    {
+      "name": "Mac & Cheese",
+      "ingredients": [
+        "beef",
+        "eggs",
+        "oregano",
+        "sugar",
+        "olive oil",
+        "cream"
+      ],
+      "price": 21.77
+    },
+    {
+      "name": "Carbonara",
+      "ingredients": [
+        "oregano",
+        "flour",
+        "eggs",
+        "pepper",
+        "garlic"
+      ],
+      "price": 13.95
+    }
+  ],
+  "desert": [
+    {
+      "name": "Chocolate Cake",
+      "ingredients": [
+        "basil",
+        "mushrooms",
+        "ham",
+        "beef"
+      ],
+      "price": 14.23
+    },
+    {
+      "name": "Brownie",
+      "ingredients": [
+        "eggs",
+        "cream",
+        "cheese",
+        "flour",
+        "salt"
+      ],
+      "price": 14.41
+    },
+    {
+      "name": "Strawberry Shortcake",
+      "ingredients": [
+        "cream",
+        "onion",
+        "flour"
+      ],
+      "price": 11.87
+    },
+    {
+      "name": "Tiramisu",
+      "ingredients": [
+        "beef",
+        "flour",
+        "eggs",
+        "oregano"
+      ],
+      "price": 6.63
+    },
+    {
+      "name": "Cheesecake",
+      "ingredients": [
+        "olive oil",
+        "eggs",
+        "pineapple",
+        "ham",
+        "garlic",
+        "chicken"
+      ],
+      "price": 17.36
+    },
+    {
+      "name": "Lemon Meringue Pie",
+      "ingredients": [
+        "chicken",
+        "garlic",
+        "wine"
+      ],
+      "price": 13.02
+    },
+    {
+      "name": "Creme Brulee",
+      "ingredients": [
+        "cream",
+        "cheese",
+        "onion",
+        "garlic"
+      ],
+      "price": 22.27
+    }
+  ],
+  "wine": [
+    {
+      "name": "Riesling",
+      "ingredients": [
+        "ham",
+        "pineapple",
+        "basil"
+      ],
+      "price": 20.87
+    },
+    {
+      "name": "Cabernet Sauvignon",
+      "ingredients": [
+        "flour",
+        "cheese",
+        "olive oil",
+        "mushrooms"
+      ],
+      "price": 11.83
+    },
+    {
+      "name": "Chardonnay",
+      "ingredients": [
+        "garlic",
+        "cheese",
+        "beef",
+        "mushrooms",
+        "oregano",
+        "pineapple"
+      ],
+      "price": 8.86
+    },
+    {
+      "name": "Tempranillo",
+      "ingredients": [
+        "olive oil",
+        "salt",
+        "garlic",
+        "chicken",
+        "basil",
+        "ham"
+      ],
+      "price": 16.75
+    },
+    {
+      "name": "Sauvignon Blanc",
+      "ingredients": [
+        "eggs",
+        "pineapple",
+        "tomato",
+        "ham",
+        "sugar"
+      ],
+      "price": 8.53
+    },
+    {
+      "name": "Zinfandel",
+      "ingredients": [
+        "pineapple",
+        "milk",
+        "oregano",
+        "garlic",
+        "mushrooms"
+      ],
+      "price": 16.85
+    },
+    {
+      "name": "Ros\u00e9",
+      "ingredients": [
+        "cheese",
+        "flour",
+        "milk",
+        "chicken",
+        "oregano",
+        "garlic"
+      ],
+      "price": 8.49
+    },
+    {
+      "name": "Syrah",
+      "ingredients": [
+        "pineapple",
+        "pepper",
+        "ham",
+        "garlic",
+        "wine",
+        "mushrooms"
+      ],
+      "price": 24.89
+    }
+  ],
+  "beer": [
+    {
+      "name": "Blonde Ale",
+      "ingredients": [
+        "mushrooms",
+        "sugar",
+        "pineapple",
+        "pepper",
+        "ham",
+        "onion"
+      ],
+      "price": 15.71
+    },
+    {
+      "name": "Dubbel",
+      "ingredients": [
+        "garlic",
+        "cream",
+        "flour",
+        "tomato"
+      ],
+      "price": 24.17
+    },
+    {
+      "name": "Stout",
+      "ingredients": [
+        "pepper",
+        "ham",
+        "oregano",
+        "tomato",
+        "olive oil"
+      ],
+      "price": 24.25
+    },
+    {
+      "name": "Porter",
+      "ingredients": [
+        "pepper",
+        "eggs",
+        "oregano"
+      ],
+      "price": 5.36
+    },
+    {
+      "name": "Bock",
+      "ingredients": [
+        "pineapple",
+        "eggs",
+        "olive oil",
+        "ham",
+        "milk",
+        "pepper"
+      ],
+      "price": 23.83
+    },
+    {
+      "name": "Wheat Beer",
+      "ingredients": [
+        "cream",
+        "chicken",
+        "olive oil",
+        "sugar",
+        "onion"
+      ],
+      "price": 19.93
+    },
+    {
+      "name": "Pilsner",
+      "ingredients": [
+        "eggs",
+        "onion",
+        "mushrooms",
+        "pineapple"
+      ],
+      "price": 15.8
+    },
+    {
+      "name": "IPA",
+      "ingredients": [
+        "pineapple",
+        "flour",
+        "cream"
+      ],
+      "price": 5.99
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Smoothie",
+      "ingredients": [
+        "ham",
+        "chicken",
+        "pineapple"
+      ],
+      "price": 18.42
+    },
+    {
+      "name": "Lemonade",
+      "ingredients": [
+        "wine",
+        "ham",
+        "pepper",
+        "pineapple",
+        "salt",
+        "cheese"
+      ],
+      "price": 11.01
+    },
+    {
+      "name": "Water",
+      "ingredients": [
+        "cheese",
+        "pineapple",
+        "oregano"
+      ],
+      "price": 16.81
+    },
+    {
+      "name": "Milkshake",
+      "ingredients": [
+        "onion",
+        "eggs",
+        "pepper",
+        "beef",
+        "olive oil",
+        "cream"
+      ],
+      "price": 8.93
+    },
+    {
+      "name": "Ginger Ale",
+      "ingredients": [
+        "milk",
+        "salt",
+        "cream",
+        "pepper",
+        "eggs"
+      ],
+      "price": 14.95
+    },
+    {
+      "name": "Orange Juice",
+      "ingredients": [
+        "eggs",
+        "pineapple",
+        "cheese"
+      ],
+      "price": 24.99
+    },
+    {
+      "name": "Mojito Mocktail",
+      "ingredients": [
+        "eggs",
+        "sugar",
+        "tomato",
+        "pepper",
+        "milk"
+      ],
+      "price": 5.71
+    },
+    {
+      "name": "Coffee",
+      "ingredients": [
+        "pineapple",
+        "ham",
+        "wine"
+      ],
+      "price": 21.94
+    },
+    {
+      "name": "Berry Punch",
+      "ingredients": [
+        "beef",
+        "oregano",
+        "olive oil",
+        "chicken",
+        "cheese"
+      ],
+      "price": 20.23
+    }
+  ]
+}
