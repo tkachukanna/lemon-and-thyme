@@ -43,7 +43,6 @@ html, body {
     padding: 0 16px;
 }
 /*--------------------------- Header, Page, Footer --------------------------*/
-
 .header {
     width: 100%;
     height: 100px;
@@ -62,7 +61,7 @@ html, body {
 .page__menu,
 .page__events,
 .page__contact {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,6 +101,14 @@ html, body {
     height: 250px;
     border: 20px solid #fffa5c;
     border-radius: 5px;
+}
+.center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #FFFFFF33;
 }
 /*-------------------------------- Header -------------------------------*/
 .header__container {
@@ -163,6 +170,21 @@ html, body {
     padding-top: 100px;
     background: url("../images/main-background.jpg") 0 0/cover no-repeat;
 }
+.main::before,
+.main::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    height: 100%;
+    width: 1px;
+    background-color: #FFFFFF33;
+}
+.main::before {
+    left: 20%;
+}
+.main::after {
+    right: 20%;
+}
 .main__container {
     display: flex;
     justify-content: space-between;
@@ -184,9 +206,6 @@ html, body {
     flex-direction: column;
     align-items: center;
     flex: 1 0 80%;
-    border-right: #FFFFFF33 1px solid;
-    border-left: #FFFFFF33 1px solid;
-    padding: 130px 0 100px 0;
 }
 .main__note {}
 .main__title {
@@ -214,12 +233,13 @@ html, body {
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all .5s ease-out;
+    transition: background-color .5s;
 }
 .main__button:hover {
     background-color: transparent;
 }
 .main__arrow {
+    position: relative;
     margin-top: 50px;
     width: 60px;
     height: 60px;
@@ -229,24 +249,43 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all .5s ease-out;
+    transition: background-color .5s;
 }
 .main__arrow:hover {
     background-color: #FFFFFF33;
 }
-.main__arrow a {
+
+.main__arrow::before,
+.main__arrow::after {
+    position: absolute;
+    left: 50%;
+    content: "";
+    width: 1px;
+    background-color: #FFFFFF33;
+}
+.main__arrow::before {
+    top: -400px;
+    height: 400px;
+}
+.main__arrow::after {
+    bottom: -110px;
+    height: 110px;
+}
+
+.main__arrow-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
 }
-.main__arrow a img {
+.main__arrow-icon {
     width: 20px;
     height: 20px;
+    fill: black;
     background-color: white;
     border-radius: 50%;
-    border: white 3px solid;
+    padding: 4px;
 }
 .main__links {
     flex-basis: 10%;
@@ -266,10 +305,15 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all .5s ease-out;
+    transition: background-color .5s;
 }
 .main__link:hover {
     background-color: #FFFFFF33;
+}
+.main__link-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
 }
 
 /*-------------------------------- About Section -------------------------------*/
@@ -318,7 +362,23 @@ html, body {
 
 /*-------------------------------- Team Section -------------------------------*/
 .team {
+    position: relative;
     background: url("../images/team-background.jpg") 0 0/cover no-repeat;
+}
+.team::before,
+.team::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #FFFFFF33;
+}
+.team::before {
+    left: 20%;
+}
+.team::after {
+    right: 20%;
 }
 .team__note {
     text-align: center;
@@ -385,31 +445,47 @@ html, body {
 .book__line {}
 
 .book__form {
-    display: flex;
-    gap: 10px;
     width: 100%;
-    justify-content: space-between;
-}
-.book__input-block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
-    width: 100%;
-    border-radius: 5px;
 }
 .book__input {
     background: #E5E5E5;
+    border-radius: 5px;
     height: 60px;
-    padding-left: 20px;
+    padding: 0 20px;
     font-size: 14px;
+    color: rgba(51, 51, 51, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+}
+.book__input:focus {
+    outline: 2px solid #f1c40f;
+    background-color: #f9f9f9;
 }
 .book__button {
-    width: 100%;
+    grid-column: span 2;
     height: 60px;
-    margin-top: 10px;
-    background-color: #E8C300;
+    background-color: rgba(232, 195, 0, 0.8);
+    border: 1px solid #E8C300;
+    border-radius: 5px;
     color: white;
+    text-transform: uppercase;
+    font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+.book__button:hover {
+    background-color: #E8C300;
+}
+.book__message {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    display: none;
+    color: rgb(51, 51, 51);
 }
 .book__photo-block {
     flex-basis: 50%;
@@ -437,7 +513,23 @@ html, body {
 }
 /*-------------------------------- Specialties Section -------------------------------*/
 .specialties {
+    position: relative;
     background: url("../images/specialties-background.jpg") 0 0/cover no-repeat;
+}
+.specialties::before,
+.specialties::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #FFFFFF33;
+}
+.specialties::before {
+    left: 20%;
+}
+.specialties::after {
+    right: 20%;
 }
 .specialties__note {
     text-align: center;
@@ -521,6 +613,7 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: color .5s;
 }
 .menu__nav-item:not(:last-child) {
    padding-right: 30px;
@@ -529,7 +622,12 @@ html, body {
 .menu__nav-item:not(:first-child) {
     padding-left: 30px;
 }
-
+.menu__nav-item:hover {
+    color: #E8C300;
+}
+.menu__nav-item.active {
+    color: #E8C300;
+}
 .menu__list {
     width: 100%;
     display: grid;
@@ -555,7 +653,23 @@ html, body {
 /*-------------------------------- Events Section -------------------------------*/
 
 .events {
+    position: relative;
     background: url("../images/events-background.jpg") 0 0/cover no-repeat;
+}
+.events::before,
+.events::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #FFFFFF33;
+}
+.events::before {
+    left: 20%;
+}
+.events::after {
+    right: 20%;
 }
 .events__note {
     text-align: center;
@@ -570,6 +684,7 @@ html, body {
 .events__photo-block {
     flex-basis: 50%;
     position: relative;
+    z-index: 1;
 }
 
 .wedding__photo,
@@ -642,6 +757,7 @@ html, body {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    transition: opacity .2s;
 }
 .gallery__photo:hover {
     opacity: 0.9;
@@ -687,7 +803,7 @@ html, body {
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 .modal__close:hover,
@@ -718,6 +834,90 @@ html, body {
     font-weight: bold;
     margin: 10px auto;
     text-align: center;
+}
+.contact__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "inputs inputs"
+        "textarea textarea"
+        "items button";
+    gap: 10px 20px;
+}
+.contact__inputs {
+    grid-area: inputs;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.contact__input {
+    background: #E5E5E5;
+    border-radius: 5px;
+    height: 60px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+}
+.contact__textarea {
+    background: #E5E5E5;
+    border-radius: 5px;
+    height: 120px;
+    padding: 20px;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+}
+.contact__textarea {
+    grid-area: textarea;
+    resize: none;
+}
+.contact__input:focus,
+.contact__textarea:focus {
+    outline: 2px solid #f1c40f;
+    background-color: #f9f9f9;
+}
+.contact__items {
+    grid-area: items;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact__icon {
+    width: 20px;
+    height: 20px;
+    fill: #E8C300;
+    margin-right: 10px;
+}
+.contact__link {
+    font-size: 12px;
+    color: rgba(51, 51, 51, 0.5);
+    font-weight: bold;
+}
+.contact__button {
+    grid-area: button;
+    height: 60px;
+    background-color: rgba(232, 195, 0, 0.8);
+    border: 1px solid #E8C300;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+.contact__button:hover {
+    background-color: #E8C300;
 }
 /*-------------------------------- Map Section -------------------------------*/
 .map {

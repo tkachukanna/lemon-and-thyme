@@ -1,3 +1,23 @@
+const dateInput = document.getElementById("date");
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() + 1);
+const yyyy = tomorrow.getFullYear();
+const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+const dd = String(tomorrow.getDate()).padStart(2, '0');
+const minDate = `${yyyy}-${mm}-${dd}`;
+dateInput.min = minDate;
+
+const bookingForm = document.getElementById("booking-form");
+const message = document.getElementById("confirmation-message");
+
+bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    message.style.display = "block";
+    form.reset();
+});
+
+
 const getMenu = async () => {
     const response = await fetch("data/menu.json");
     return await response.json();
@@ -35,6 +55,8 @@ const categoryItems = document.querySelectorAll(".menu__nav-item");
 
 categoryItems.forEach((item) => {
     item.addEventListener("click", async () => {
+        categoryItems.forEach(item => item.classList.remove('active'));
+        item.classList.add('active');
         category = item.id;
         await renderMenu(category);
     })
@@ -42,7 +64,7 @@ categoryItems.forEach((item) => {
 
 
 const modal = document.getElementById("modal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
+
 const galleryImages = document.querySelectorAll(".gallery__photo");
 galleryImages.forEach((item, index) => {
     const modalImg = document.getElementById("modalImage");

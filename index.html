@@ -13,7 +13,7 @@
             <nav class="header__nav nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">About</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Team</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Booking</a></li>
                 </ul>
@@ -48,20 +48,28 @@
                         <a class="main__button">Explore</a>
                     </div>
                     <div class="main__arrow">
-                        <a href="#about">
-                            <img src="icons/arrow.svg" alt="Down arrow icon">
+                        <a class="main__arrow-link">
+                            <svg class="main__arrow-icon">
+                                <use href="./icons/icons.svg#icon-arrow"></use>
+                            </svg>
                         </a>
                     </div>
                 </div>
                 <div class="main__links">
                     <a class="main__link" href="https://www.facebook.com/" target="_blank">
-                        <img src="icons/facebook.svg" alt="Link to facebook">
+                        <svg class="main__link-icon">
+                            <use href="./icons/icons.svg#icon-facebook"></use>
+                        </svg>
                     </a>
                     <a class="main__link" href="https://x.com/" target="_blank">
-                        <img src="icons/twitter.svg" alt="Link to twitter">
+                        <svg class="main__link-icon">
+                            <use href="./icons/icons.svg#icon-twitter"></use>
+                        </svg>
                     </a>
                     <a class="main__link" href="https://www.instagram.com/" target="_blank">
-                        <img src="icons/instagram.svg" alt="Link to instagram">
+                        <svg class="main__link-icon">
+                            <use href="./icons/icons.svg#icon-instagram"></use>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -85,6 +93,7 @@
             </div>
         </section>
         <section class="page__team team">
+            <div class="center-line"></div>
             <p class="team__note note">our team</p>
             <div class="team__container">
                 <div class="team__photo-block">
@@ -104,31 +113,38 @@
                 <div class="book__form-block">
                     <h2 class="book__title section-title">Book a table</h2>
                     <div class="book__line line"></div>
-                    <form action="#" class="book__form">
-                        <div class="book__input-block">
-                            <input type="text" class="book__input" placeholder="Name">
-                            <input type="text" class="book__input" placeholder="Phone">
-                            <input type="date" class="book__input" placeholder="Date (mm/dd)">
-                        </div>
-                        <div class="book__input-block">
-                            <input type="email" class="book__input" placeholder="Email">
-                            <select name="people" id="number_of_people" class="book__input">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="more">More...</option>
-                            </select>
-                            <input type="time" class="book__input" placeholder="Time">
-                        </div>
+                    <form class="book__form" id="booking-form">
+                        <input class="book__input" type="text" placeholder="Name" name="name" required>
+                        <input class="book__input" type="email" placeholder="Email" name="email">
+                        <input class="book__input" type="tel" placeholder="Phone" name="phone" pattern="^\+380\d{9}$" required title="Введіть номер у форматі +380XXXXXXXXX">
+                        <select class="book__input" name="people">
+                            <option selected>People</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6+</option>
+                        </select>
+                        <input class="book__input" id="date" type="date" placeholder="Date (mm/dd)" name="date" required>
+                        <select class="book__input" name="time">
+                            <option selected>Time</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                            <option>16:00</option>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+                        </select>
+                        <button class="book__button" type="submit">Book Now</button>
                     </form>
-                    <input type="submit" class="book__button" value="BOOK NOW">
+                    <div class="book__message" id="confirmation-message">
+                        Thank you for booking a table. Please wait for our call to confirm your reservation.
+                    </div>
                 </div>
                 <div class="book__photo-block">
                     <img class="book__photo" src="./images/book.jpg" alt="Restaurant dishes">
@@ -140,17 +156,52 @@
             </div>
         </section>
         <section class="page__specialties specialties">
+            <div class="center-line"></div>
             <p class="specialties__note note">specialties</p>
             <div class="specialties__container">
                 <div class="specialties__photo-block">
                     <div class="specialties__border border"></div>
-                    <img class="specialties__photo" src="./images/gazpacho.jpg" alt="Chocolate pancakes with raspberry">
+                    <img class="specialties__photo" src="./images/gazpacho.jpg" alt="Gazpacho">
                 </div>
                 <div class="specialties__text-block">
-                    <h2 class="specialties__title section-title">Chocolate pancakes</h2>
+                    <h2 class="specialties__title section-title">Gazpacho</h2>
                     <div class="specialties__line line"></div>
-                    <p class="specialties__subtitle">At Lemon & Thyme, our kitchen is led by a passionate and skilled master chef who brings years of experience and creativity to every dish.</p>
-                    <p class="specialties__text">With a deep love for fresh ingredients and bold flavors, they craft each plate with precision and artistry. Inspired by both tradition and innovation, our chef transforms simple ingredients into extraordinary culinary experiences. Every meal is a reflection of expertise, dedication, and a commitment to excellence.</p>
+                    <p class="specialties__subtitle">Gazpacho is a refreshing cold soup made from ripe tomatoes, cucumbers, peppers, and garlic, blended with olive oil and vinegar.</p>
+                    <p class="specialties__text">Originating from Spain, it’s perfect for hot summer days. Light, flavorful, and healthy — a true Mediterranean classic.</p>
+                </div>
+            </div>
+            <div class="specialties__slider">. . .</div>
+        </section>
+        <section class="page__specialties specialties">
+            <div class="center-line"></div>
+            <p class="specialties__note note">specialties</p>
+            <div class="specialties__container">
+                <div class="specialties__photo-block">
+                    <div class="specialties__border border"></div>
+                    <img class="specialties__photo" src="./images/seafood-pasta.jpg" alt="Seafood pasta">
+                </div>
+                <div class="specialties__text-block">
+                    <h2 class="specialties__title section-title">Seafood pasta</h2>
+                    <div class="specialties__line line"></div>
+                    <p class="specialties__subtitle">Seafood pasta is a delicious dish made with tender pasta and a mix of fresh seafood like shrimp, mussels, and squid.</p>
+                    <p class="specialties__text">It's cooked in a rich garlic, white wine, and tomato sauce. Full of flavor and elegance, it brings the taste of the sea to your table.</p>
+                </div>
+            </div>
+            <div class="specialties__slider">. . .</div>
+        </section>
+        <section class="page__specialties specialties">
+            <div class="center-line"></div>
+            <p class="specialties__note note">specialties</p>
+            <div class="specialties__container">
+                <div class="specialties__photo-block">
+                    <div class="specialties__border border"></div>
+                    <img class="specialties__photo" src="./images/lemon-pie.jpg" alt="Lemon Meringue Pie">
+                </div>
+                <div class="specialties__text-block">
+                    <h2 class="specialties__title section-title">Lemon Meringue Pie</h2>
+                    <div class="specialties__line line"></div>
+                    <p class="specialties__subtitle">Lemon Meringue Pie is a classic dessert with a zesty lemon filling and a fluffy, golden meringue topping.</p>
+                    <p class="specialties__text">Set in a buttery, flaky crust, it offers the perfect balance of sweet and tart. Light and refreshing, it's a delightful way to end any meal.</p>
                 </div>
             </div>
             <div class="specialties__slider">. . .</div>
@@ -161,7 +212,7 @@
                 <div class="menu__line line"></div>
                 <p class="menu__subtitle">Explore our delicious selection of thoughtfully crafted dishes made with fresh, seasonal ingredients.</p>
                 <ul class="menu__nav">
-                    <li class="menu__nav-item" id="soup">soup</li>
+                    <li class="menu__nav-item active" id="soup">soup</li>
                     <li class="menu__nav-item" id="pizza">pizza</li>
                     <li class="menu__nav-item" id="pasta">pasta</li>
                     <li class="menu__nav-item" id="desert">desert</li>
@@ -173,6 +224,7 @@
             </div>
         </section>
         <section class="page__events events">
+            <div class="center-line"></div>
             <p class="events__note note">private events</p>
             <div class="events__container">
                 <div class="events__photo-block wedding">
@@ -192,16 +244,16 @@
         </section>
         <section class="page__gallery gallery">
             <div class="gallery__photo-block">
-                <img id="gallery1" src="images/gallery1.jpg" alt="Yellow lamp in the restaurant" class="gallery__photo">
+                <img src="images/gallery1.jpg" alt="Yellow lamp in the restaurant" class="gallery__photo">
             </div>
             <div class="gallery__photo-block">
-                <img id="gallery2" src="images/gallery2.jpg" alt="Oysters with lemon" class="gallery__photo">
+                <img src="images/gallery2.jpg" alt="Oysters with lemon" class="gallery__photo">
             </div>
             <div class="gallery__photo-block">
-                <img id="gallery3" src="images/gallery3.jpg" alt="Tables in the restaurant" class="gallery__photo">
+                <img src="images/gallery3.jpg" alt="Tables in the restaurant" class="gallery__photo">
             </div>
             <div class="gallery__photo-block">
-                <img id="gallery4" src="images/gallery4.jpg" alt="Grilled meat and vegetable" class="gallery__photo">
+                <img src="images/gallery4.jpg" alt="Grilled meat and vegetable" class="gallery__photo">
             </div>
             <div id="modal" class="gallery__modal modal">
                 <span id="modalClose" class="modal__close">&times;</span>
@@ -216,11 +268,39 @@
                 <h2 class="contact__title section-title">Contact</h2>
                 <div class="contact__line line"></div>
                 <p class="contact__subtitle">Get in touch with us to book a table, ask a question, or simply say hello — we’d love to hear from you!</p>
-                <form action="#" class="contact__form-block"></form>
+                <form class="contact__form">
+                    <div class="contact__inputs">
+                        <input class="contact__input" type="text" placeholder="Name" name="name" required>
+                        <input class="contact__input" type="email" placeholder="Email" name="email">
+                        <input class="contact__input" type="tel" placeholder="Phone" name="phone" pattern="^\+380\d{9}$" required title="Введіть номер у форматі +380XXXXXXXXX">
+                    </div>
+                    <textarea class="contact__textarea" placeholder="Message" name="message" required></textarea>
+                    <ul class="contact__items">
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use href="./icons/icons.svg#icon-location"></use>
+                            </svg>
+                            <a class="contact__link" href="https://maps.app.goo.gl/GHLuNrx4T8JZtAXP8">1120 Thomasville Road</a>
+                        </li>
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use href="./icons/icons.svg#icon-phone"></use>
+                            </svg>
+                            <a class="contact__link" href="tel:+18507657517">+18507657517</a>
+                        </li>
+                        <li class="contact__item">
+                            <svg class="contact__icon">
+                                <use href="./icons/icons.svg#icon-mail"></use>
+                            </svg>
+                            <a class="contact__link" href="mailto:shopbakery@gmail.com">lemonthyme@gmail.com</a>
+                        </li>
+                    </ul>
+                    <button class="contact__button" type="reset">Send Message</button>
+                </form>
             </div>
         </section>
         <section class="page__map map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1147936.0543722685!2d-112.61410949333374!3d33.31309269624713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4604576f66b42315%3A0x3bb69bd70e50e604!2sLemon%20%26%20Thyme!5e0!3m2!1suk!2sua!4v1750844695509!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.3661632385565!2d-84.28137992492286!3d30.45406519904782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ecf58c2cee7c45%3A0x72fb1a948fb13068!2sLemon%20%26%20Thyme!5e0!3m2!1suk!2sua!4v1751390269708!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>\
         </section>
     </main>
     <footer class="footer">
