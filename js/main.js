@@ -1,3 +1,4 @@
+// form for book a table
 const dateInput = document.getElementById("date");
 const today = new Date();
 const tomorrow = new Date(today);
@@ -17,12 +18,11 @@ bookingForm.addEventListener("submit", function (e) {
     form.reset();
 });
 
-
+// render menu
 const getMenu = async () => {
     const response = await fetch("data/menu.json");
     return await response.json();
 }
-
 
 const renderMenu = async (category) => {
     const menu = await getMenu();
@@ -62,7 +62,7 @@ categoryItems.forEach((item) => {
     })
 })
 
-
+// modal for gallery section
 const modal = document.getElementById("modal");
 
 const galleryImages = document.querySelectorAll(".gallery__photo");
@@ -80,3 +80,12 @@ const modalClose = document.getElementById("modalClose");
 modalClose.addEventListener("click", () => {
     modal.style.display = "none";
 })
+
+// specialties slider
+const specialtiesSlider = new Swiper('.specialties__slider', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+});

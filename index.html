@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <title>Lemon & Thyme</title>
     <link rel="shortcut icon" href="icons/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrapper">
     <header class="header">
         <div class="header__container">
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Team</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Booking</a></li>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="#">Home</a></li>
+                    <li class="header__item"><a class="header__link" href="#">About</a></li>
+                    <li class="header__item"><a class="header__link" href="#">Team</a></li>
+                    <li class="header__item"><a class="header__link" href="#">Booking</a></li>
                 </ul>
-                <div class="nav__logo">
-                    <a href="#" class="nav__logo-link">
-                        <img class="nav__logo-img" src="icons/logo.svg" alt="Lemon & Thyme logo">
+                <div class="header__logo">
+                    <a href="#">
+                        <img src="icons/logo.svg" alt="Lemon & Thyme logo">
                     </a>
                 </div>
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#">Menu</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Gallery</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="#">Menu</a></li>
+                    <li class="header__item"><a class="header__link" href="#">Events</a></li>
+                    <li class="header__item"><a class="header__link" href="#">Gallery</a></li>
+                    <li class="header__item"><a class="header__link" href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -158,53 +159,47 @@
         <section class="page__specialties specialties">
             <div class="center-line"></div>
             <p class="specialties__note note">specialties</p>
-            <div class="specialties__container">
-                <div class="specialties__photo-block">
-                    <div class="specialties__border border"></div>
-                    <img class="specialties__photo" src="./images/gazpacho.jpg" alt="Gazpacho">
+            <div class="swiper specialties__slider">
+                <div class="swiper-wrapper specialties__container">
+                    <div class="specialties__content swiper-slide">
+                        <div class="specialties__photo-block">
+                            <div class="specialties__border border"></div>
+                            <img class="specialties__photo" src="./images/gazpacho.jpg" alt="Gazpacho">
+                        </div>
+                        <div class="specialties__text-block">
+                            <h2 class="specialties__title section-title">Gazpacho</h2>
+                            <div class="specialties__line line"></div>
+                            <p class="specialties__subtitle">Gazpacho is a refreshing cold soup made from ripe tomatoes, cucumbers, peppers, and garlic, blended with olive oil and vinegar.</p>
+                            <p class="specialties__text">Originating from Spain, it’s perfect for hot summer days. Light, flavorful, and healthy — a true Mediterranean classic.</p>
+                        </div>
+                    </div>
+                    <div class="specialties__content swiper-slide">
+                        <div class="specialties__photo-block">
+                            <div class="specialties__border border"></div>
+                            <img class="specialties__photo" src="./images/seafood-pasta.jpg" alt="Seafood pasta">
+                        </div>
+                        <div class="specialties__text-block">
+                            <h2 class="specialties__title section-title">Seafood pasta</h2>
+                            <div class="specialties__line line"></div>
+                            <p class="specialties__subtitle">Seafood pasta is a delicious dish made with tender pasta and a mix of fresh seafood like shrimp, mussels, and squid.</p>
+                            <p class="specialties__text">It's cooked in a rich garlic, white wine, and tomato sauce. Full of flavor and elegance, it brings the taste of the sea to your table.</p>
+                        </div>
+                    </div>
+                    <div class="specialties__content swiper-slide">
+                        <div class="specialties__photo-block">
+                            <div class="specialties__border border"></div>
+                            <img class="specialties__photo" src="./images/lemon-pie.jpg" alt="Lemon Meringue Pie">
+                        </div>
+                        <div class="specialties__text-block">
+                            <h2 class="specialties__title section-title">Lemon Meringue Pie</h2>
+                            <div class="specialties__line line"></div>
+                            <p class="specialties__subtitle">Lemon Meringue Pie is a classic dessert with a zesty lemon filling and a fluffy, golden meringue topping.</p>
+                            <p class="specialties__text">Set in a buttery, flaky crust, it offers the perfect balance of sweet and tart. Light and refreshing, it's a delightful way to end any meal.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="specialties__text-block">
-                    <h2 class="specialties__title section-title">Gazpacho</h2>
-                    <div class="specialties__line line"></div>
-                    <p class="specialties__subtitle">Gazpacho is a refreshing cold soup made from ripe tomatoes, cucumbers, peppers, and garlic, blended with olive oil and vinegar.</p>
-                    <p class="specialties__text">Originating from Spain, it’s perfect for hot summer days. Light, flavorful, and healthy — a true Mediterranean classic.</p>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="specialties__slider">. . .</div>
-        </section>
-        <section class="page__specialties specialties">
-            <div class="center-line"></div>
-            <p class="specialties__note note">specialties</p>
-            <div class="specialties__container">
-                <div class="specialties__photo-block">
-                    <div class="specialties__border border"></div>
-                    <img class="specialties__photo" src="./images/seafood-pasta.jpg" alt="Seafood pasta">
-                </div>
-                <div class="specialties__text-block">
-                    <h2 class="specialties__title section-title">Seafood pasta</h2>
-                    <div class="specialties__line line"></div>
-                    <p class="specialties__subtitle">Seafood pasta is a delicious dish made with tender pasta and a mix of fresh seafood like shrimp, mussels, and squid.</p>
-                    <p class="specialties__text">It's cooked in a rich garlic, white wine, and tomato sauce. Full of flavor and elegance, it brings the taste of the sea to your table.</p>
-                </div>
-            </div>
-            <div class="specialties__slider">. . .</div>
-        </section>
-        <section class="page__specialties specialties">
-            <div class="center-line"></div>
-            <p class="specialties__note note">specialties</p>
-            <div class="specialties__container">
-                <div class="specialties__photo-block">
-                    <div class="specialties__border border"></div>
-                    <img class="specialties__photo" src="./images/lemon-pie.jpg" alt="Lemon Meringue Pie">
-                </div>
-                <div class="specialties__text-block">
-                    <h2 class="specialties__title section-title">Lemon Meringue Pie</h2>
-                    <div class="specialties__line line"></div>
-                    <p class="specialties__subtitle">Lemon Meringue Pie is a classic dessert with a zesty lemon filling and a fluffy, golden meringue topping.</p>
-                    <p class="specialties__text">Set in a buttery, flaky crust, it offers the perfect balance of sweet and tart. Light and refreshing, it's a delightful way to end any meal.</p>
-                </div>
-            </div>
-            <div class="specialties__slider">. . .</div>
         </section>
         <section class="page__menu menu">
             <div class="menu__container">
@@ -309,6 +304,7 @@
         </div>
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
