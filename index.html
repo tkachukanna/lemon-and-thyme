@@ -13,27 +13,27 @@
         <div class="header__container">
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a class="header__link" href="#">Home</a></li>
-                    <li class="header__item"><a class="header__link" href="#">About</a></li>
-                    <li class="header__item"><a class="header__link" href="#">Team</a></li>
-                    <li class="header__item"><a class="header__link" href="#">Booking</a></li>
+                    <li class="header__item"><a class="header__link" href="#about-section">About</a></li>
+                    <li class="header__item"><a class="header__link" href="#team-section">Team</a></li>
+                    <li class="header__item"><a class="header__link" href="#booking-section">Booking</a></li>
+                    <li class="header__item"><a class="header__link" href="#specialties-section">Specialties</a></li>
                 </ul>
                 <div class="header__logo">
-                    <a href="#">
+                    <a href="#main-section">
                         <img src="icons/logo.svg" alt="Lemon & Thyme logo">
                     </a>
                 </div>
                 <ul class="header__list">
-                    <li class="header__item"><a class="header__link" href="#">Menu</a></li>
-                    <li class="header__item"><a class="header__link" href="#">Events</a></li>
-                    <li class="header__item"><a class="header__link" href="#">Gallery</a></li>
-                    <li class="header__item"><a class="header__link" href="#">Contact</a></li>
+                    <li class="header__item"><a class="header__link" href="#menu-section">Menu</a></li>
+                    <li class="header__item"><a class="header__link" href="#events-section">Events</a></li>
+                    <li class="header__item"><a class="header__link" href="#gallery-section">Gallery</a></li>
+                    <li class="header__item"><a class="header__link" href="#contact-section">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="page">
-        <section class="page__main main">
+        <section id="main-section" class="page__main main">
             <div class="main__container">
                 <div class="main__schedule">
                     <p class="main__schedule-text">
@@ -45,11 +45,11 @@
                     <h1 class="main__title">Lemon & Thyme</h1>
                     <div class="main__line line"></div>
                     <div class="main__buttons">
-                        <a class="main__button">Book a table</a>
-                        <a class="main__button">Explore</a>
+                        <a class="main__button" href="#booking-section">Book a table</a>
+                        <a class="main__button" href="#about-section">Explore</a>
                     </div>
                     <div class="main__arrow">
-                        <a class="main__arrow-link">
+                        <a class="main__arrow-link" href="#about-section">
                             <svg class="main__arrow-icon">
                                 <use href="./icons/icons.svg#icon-arrow"></use>
                             </svg>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section id="about" class="page__about about">
+        <section id="about-section" class="page__about about">
             <div class="about__container">
                 <div class="about__text-block">
                     <h2 class="about__title section-title">About Us</h2>
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section class="page__team team">
+        <section id="team-section" class="page__team team">
             <div class="center-line"></div>
             <p class="team__note note">our team</p>
             <div class="team__container">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="page__book book">
+        <section id="booking-section" class="page__book book">
             <div class="book__container">
                 <div class="book__form-block">
                     <h2 class="book__title section-title">Book a table</h2>
@@ -156,7 +156,7 @@
                 <p class="book__more-info">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</p>
             </div>
         </section>
-        <section class="page__specialties specialties">
+        <section id="specialties-section" class="page__specialties specialties">
             <div class="center-line"></div>
             <p class="specialties__note note">specialties</p>
             <div class="swiper specialties__slider">
@@ -201,7 +201,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="page__menu menu">
+        <section id="menu-section" class="page__menu menu">
             <div class="menu__container">
                 <h2 class="menu__title section-title">DELICIOUS MENU</h2>
                 <div class="menu__line line"></div>
@@ -218,7 +218,7 @@
                 <ul class="menu__list" id="menu"></ul>
             </div>
         </section>
-        <section class="page__events events">
+        <section id="events-section" class="page__events events">
             <div class="center-line"></div>
             <p class="events__note note">private events</p>
             <div class="events__container">
@@ -237,7 +237,7 @@
                 <p class="events__more-info">For private events please call: +40 729 131 637/+40 726 458 782 or use the contact form.</p>
             </div>
         </section>
-        <section class="page__gallery gallery">
+        <section id="gallery-section" class="page__gallery gallery">
             <div class="gallery__photo-block">
                 <img src="images/gallery1.jpg" alt="Yellow lamp in the restaurant" class="gallery__photo">
             </div>
@@ -255,10 +255,10 @@
                 <div class="modal__content">
                     <img class="modal__image" id="modalImage">
                 </div>
-                
             </div>
         </section>
-        <section class="page__contact contact">
+
+        <section id="contact-section" class="page__contact contact">
             <div class="contact__container">
                 <h2 class="contact__title section-title">Contact</h2>
                 <div class="contact__line line"></div>
