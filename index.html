@@ -12,7 +12,7 @@
 <div class="wrapper">
     <header class="header">
         <div class="header__container">
-            <nav class="header__nav">
+            <nav class="header__nav" id="nav">
                 <ul class="header__list">
                     <li class="header__item"><a class="header__link" href="#about-section">About</a></li>
                     <li class="header__item"><a class="header__link" href="#team-section">Team</a></li>
@@ -20,7 +20,7 @@
                     <li class="header__item"><a class="header__link" href="#specialties-section">Specialties</a></li>
                 </ul>
                 <div class="header__logo">
-                    <a href="#main-section">
+                    <a href="#main-section" class="header__link">
                         <img src="icons/logo.svg" alt="Lemon & Thyme logo">
                     </a>
                 </div>
@@ -31,11 +31,21 @@
                     <li class="header__item"><a class="header__link" href="#contact-section">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header__burger" id="burger">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </div>
         </div>
     </header>
     <main class="page">
         <section id="main-section" class="page__main main">
             <div class="main__container">
+                <div class="main__logo">
+                    <a href="#main-section">
+                        <img src="icons/logo.svg" alt="Lemon & Thyme logo">
+                    </a>
+                </div>
                 <div class="main__schedule">
                     <p class="main__schedule-text">
                         Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM

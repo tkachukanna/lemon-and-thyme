@@ -1,29 +1,27 @@
-// form for book a table
-const dateInput = document.getElementById("date");
-const today = new Date();
-const tomorrow = new Date(today);
-tomorrow.setDate(today.getDate() + 1);
-const yyyy = tomorrow.getFullYear();
-const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
-const dd = String(tomorrow.getDate()).padStart(2, '0');
-const minDate = `${yyyy}-${mm}-${dd}`;
-dateInput.min = minDate;
+const createBookingForm = () => {
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    const yyyy = tomorrow.getFullYear();
+    const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+    const dd = String(tomorrow.getDate()).padStart(2, '0');
+    const minDate = `${yyyy}-${mm}-${dd}`;
+    dateInput.min = minDate;
 
-const bookingForm = document.getElementById("booking-form");
-const message = document.getElementById("confirmation-message");
+    const bookingForm = document.getElementById("booking-form");
+    const message = document.getElementById("confirmation-message");
 
-bookingForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    message.style.display = "block";
-    form.reset();
-});
-
-// render menu
+    bookingForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        message.style.display = "block";
+        form.reset();
+    });
+}
 const getMenu = async () => {
     const response = await fetch("data/menu.json");
     return await response.json();
 }
-
 const renderMenu = async (category) => {
     const menu = await getMenu();
     const menuList = document.getElementById("menu");
@@ -47,45 +45,72 @@ const renderMenu = async (category) => {
         menuList.append(menuItem);
     });
 }
+const createModalForGallerySection = () => {
+    const modal = document.getElementById("modal");
 
-let category = "soup";
-renderMenu(category);
+    const galleryImages = document.querySelectorAll(".gallery__photo");
+    galleryImages.forEach((item, index) => {
+        const modalImg = document.getElementById("modalImage");
+        item.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = item.src;
+        })
 
-const categoryItems = document.querySelectorAll(".menu__nav-item");
-
-categoryItems.forEach((item) => {
-    item.addEventListener("click", async () => {
-        categoryItems.forEach(item => item.classList.remove('active'));
-        item.classList.add('active');
-        category = item.id;
-        await renderMenu(category);
-    })
-})
-
-// modal for gallery section
-const modal = document.getElementById("modal");
-
-const galleryImages = document.querySelectorAll(".gallery__photo");
-galleryImages.forEach((item, index) => {
-    const modalImg = document.getElementById("modalImage");
-    item.addEventListener("click", () => {
-        modal.style.display = "block";
-        modalImg.src = item.src;
     })
 
-})
+    const modalClose = document.getElementById("modalClose");
 
-const modalClose = document.getElementById("modalClose");
+    modalClose.addEventListener("click", () => {
+        modal.style.display = "none";
+    })
+}
+const createSpecialtiesSlider = () => {
+    const specialtiesSlider = new Swiper('.specialties__slider', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+    });
+}
+const createBurgerMenu = () => {
+    const burger = document.getElementById("burger");
+    const navMenu = document.getElementById("nav");
 
-modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
-})
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
 
-// specialties slider
-const specialtiesSlider = new Swiper('.specialties__slider', {
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-});
+    const navLinks = document.querySelectorAll(".header__link");
+
+    navLinks.forEach((item) => {
+        item.addEventListener("click", () => {
+            burger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+    })
+}
+
+const main = () => {
+    createBookingForm();
+
+    // render menu
+    let category = "soup";
+    renderMenu(category);
+    const categoryItems = document.querySelectorAll(".menu__nav-item");
+    categoryItems.forEach((item) => {
+        item.addEventListener("click", async () => {
+            categoryItems.forEach(item => item.classList.remove('active'));
+            item.classList.add('active');
+            category = item.id;
+            await renderMenu(category);
+        })
+    })
+
+    createModalForGallerySection();
+    createSpecialtiesSlider();
+    createBurgerMenu();
+}
+
+main();
